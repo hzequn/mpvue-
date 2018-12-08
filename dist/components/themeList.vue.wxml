@@ -1,0 +1,20 @@
+<template name="134ad8be">
+  <view class="_div data-v-5a7cb24d theme-list">
+    <view class="_div data-v-5a7cb24d list-item" wx:key="item.id" key="{{item.id}}" bindtap="handleProxy" data-eventid="{{'0-'+index}}" data-comkey="{{$k}}" wx:for="{{json}}" wx:for-index="index" wx:for-item="item">
+      <view class="_div data-v-5a7cb24d item-container">
+        <view class="_div data-v-5a7cb24d item-image">
+          <image src="{{item.thumbnail}}" mode="widthFix" lazy-load="{{true}}" class="_img data-v-5a7cb24d"></image>
+        </view>
+        <view class="_div data-v-5a7cb24d item-text">
+          <view class="_div data-v-5a7cb24d item-title">{{item.name}}</view>
+          <view class="_div data-v-5a7cb24d item-subTitle">{{item.description}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-5a7cb24d list-bottomLoad" wx:if="{{bottomLoading}}">
+      <view class="_div data-v-5a7cb24d loading" wx:if="{{bottomLoading === 'loading'}}">加载中...</view>
+      <view class="_div data-v-5a7cb24d nothing" wx:if="{{bottomLoading === 'nothing'}}">---我也是有底线的---</view>
+      <view class="_div data-v-5a7cb24d error" wx:if="{{bottomLoading === 'error'}}">出错了，刷新试试</view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,13 @@
+<template name="2314359a">
+  <view class="_div data-v-07c252fc pageLoading" wx:if="{{loading}}">
+    <view class="_div data-v-07c252fc pageLoading-type nothing" wx:if="{{loading === 'nothing'}}">
+      <icon class="_icon data-v-07c252fc type-icon" type="info" size="{{70}}"></icon>
+      <view class="_div data-v-07c252fc type-label">{{nothingText}}</view>
+    </view>
+    <view class="_div data-v-07c252fc pageLoading-type error" wx:if="{{loading === 'error'}}">
+      <icon class="_icon data-v-07c252fc type-icon" type="warn" size="{{70}}"></icon>
+      <view class="_div data-v-07c252fc type-label">{{errorText}}</view>
+      <button class="_button data-v-07c252fc type-button" type="primary" hover-class="app-button-hover" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">重试</button>
+    </view>
+  </view>
+</template>

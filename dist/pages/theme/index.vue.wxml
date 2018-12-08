@@ -1,0 +1,19 @@
+<import src="/components/articleList.vue.wxml" />
+<import src="/components/loading.vue.wxml" />
+<template name="8c8a978c">
+  <view id="theme" class="_div data-v-0785335c">
+    <scroll-view scroll-y bindscrolltolower="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_scroll-view data-v-0785335c" style=" {{('height:' + (winHeight + 'px') + ';')}}">
+      <view class="_div data-v-0785335c theme-cover" wx:if="{{themeInfo && themeInfo.image}}">
+        <image class="_img data-v-0785335c theme-image" src="{{themeInfo.image}}" mode="aspectFill"></image>
+        <view class="_div data-v-0785335c theme-title">
+          <view class="_div data-v-0785335c title-name">{{themeInfo.name}}</view>
+          <view class="_div data-v-0785335c title-description">{{themeInfo.description}}</view>
+        </view>
+      </view>
+      <view class="_div data-v-0785335c theme-list">
+        <template data="{{...$root[$kk+'0'], $root}}" is="4e3b71aa"></template>
+      </view>
+    </scroll-view>
+    <template data="{{...$root[$kk+'1'], $root}}" is="2314359a"></template>
+  </view>
+</template>

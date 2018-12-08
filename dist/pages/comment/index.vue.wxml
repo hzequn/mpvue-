@@ -1,0 +1,10 @@
+<import src="/components/commentList.vue.wxml" />
+<import src="/components/loading.vue.wxml" />
+<template name="5fb16c90">
+  <view id="comment" class="_div data-v-75a127e8">
+    <scroll-view scroll-y enable-back-to-top="{{true}}" bindscrolltolower="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_scroll-view data-v-75a127e8" style=" {{('height:' + (winHeight + 'px') + ';')}}">
+      <template data="{{...$root[$kk+'0'], $root}}" is="428fef94"></template>
+    </scroll-view>
+    <template data="{{...$root[$kk+'1'], $root}}" is="2314359a"></template>
+  </view>
+</template>

@@ -1,0 +1,25 @@
+<template name="428fef94">
+  <view class="_div data-v-f69cbd3a comment-list">
+    <view class="_div data-v-f69cbd3a list-item" wx:key="item.id" key="{{item.id}}" wx:for="{{json}}" wx:for-index="index" wx:for-item="item">
+      <view class="_div data-v-f69cbd3a item-header">
+        <view class="_div data-v-f69cbd3a item-user">
+          <image class="_img data-v-f69cbd3a item-avatar" src="{{item.avatar}}"></image>
+          <view class="_div data-v-f69cbd3a item-author">{{item.author}}</view>
+        </view>
+        <view class="_div data-v-f69cbd3a item-time">{{item.time}}</view>
+      </view>
+      <view class="_div data-v-f69cbd3a item-content">{{item.content}}</view>
+      <view class="_div data-v-f69cbd3a item-footer">
+        <view class="_div data-v-f69cbd3a footer-item">
+          <view class="_div data-v-f69cbd3a item-icon my-icon-zan"></view>
+          <view class="_div data-v-f69cbd3a item-value ">{{item.likes}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-f69cbd3a list-bottomLoad" wx:if="{{json.length > 0 && bottomLoading}}">
+      <view class="_div data-v-f69cbd3a loading" wx:if="{{bottomLoading === 'loading'}}">加载中...</view>
+      <view class="_div data-v-f69cbd3a nothing" wx:if="{{bottomLoading === 'nothing'}}">刷完了，休息一下吧</view>
+      <view class="_div data-v-f69cbd3a error" wx:if="{{bottomLoading === 'error'}}">出错了，刷新试试</view>
+    </view>
+  </view>
+</template>

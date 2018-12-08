@@ -1,0 +1,21 @@
+<template name="4e3b71aa">
+  <view class="_div data-v-1b03f8fa article-list">
+    <view class="_div data-v-1b03f8fa list-date" wx:if="{{date}}">{{date}}</view>
+    <view class="_div data-v-1b03f8fa list-item" wx:key="item.id" key="{{item.id}}" bindtap="handleProxy" data-eventid="{{'0-'+index}}" data-comkey="{{$k}}" wx:for="{{json}}" wx:for-index="index" wx:for-item="item">
+      <view class="_div data-v-1b03f8fa item-container images" wx:if="{{item.images}}">
+        <view class="_div data-v-1b03f8fa item-title">{{item.title}}</view>
+        <view class="_div data-v-1b03f8fa item-images">
+          <image src="{{item.images[0] || item.images}}" mode="widthFix" lazy-load="{{true}}" class="_img data-v-1b03f8fa"></image>
+        </view>
+      </view>
+      <view class="_div data-v-1b03f8fa item-container text" wx:else>
+        <view class="_div data-v-1b03f8fa item-title">{{item.title}}</view>
+      </view>
+    </view>
+    <view class="_div data-v-1b03f8fa list-bottomLoad" wx:if="{{json.length > 0 && bottomLoading}}">
+      <view class="_div data-v-1b03f8fa loading" wx:if="{{bottomLoading === 'loading'}}">加载中...</view>
+      <view class="_div data-v-1b03f8fa nothing" wx:if="{{bottomLoading === 'nothing'}}">---我也是有底线的---</view>
+      <view class="_div data-v-1b03f8fa error" wx:if="{{bottomLoading === 'error'}}">出错了，刷新试试</view>
+    </view>
+  </view>
+</template>
